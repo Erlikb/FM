@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main class="container py-5">
+    <section class="card card-body">
+        <h1 class="display-1 text-center">Fundamentos Matemáticos</h1>
+        <p class="text-center">En esta primera unidad se revisaron temas de matemática básica, en la parte de abajo
+            escoja el tema que desea revisar.</p>
+    </section>
+    <style>
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 15px 17px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+    <br>
+    <div class="navbar">
+        <a href="/tema1">Sistema de números reales</a>
+        <a href="/diferenciadecuadrados">Diferencia de cuadrados</a>
+        <a href="/diferenciadecubos">Diferencia de cubos</a>
+        <a href="/factorcomun">Factor Comun</a>
+        <a href="/trinomiocuadradoperfecto">Trinomio cuadrado perfecto</a>
+    </div>
+</main>
+{% endblock %}

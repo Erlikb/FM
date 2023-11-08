@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<head>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<div class="bodyt1">
+    <br>
+    <h1 class="titlet1"><b>SISTEMA DE NÚMEROS REALES</b></h1>
+    <br><br>
+    <img class="center-img" src="{% static 'pictures/img1T1.jpg' %}">
+    <br><br>
+    <div class="centerp1">
+        <p>Son todos aquellos números que se encuentran incluidos dentro de los números racionales.
+            Pueden ser positivos, negativos e incluir al número cero, como en el caso de los números irracionales. Estos
+            números pueden ser escritos de diferentes maneras, algunas de ellas muy simples usados generalmente en
+            operaciones matemáticas sencillas, y en formas más complejas. En este grupo de números también se encuentran
+            incluidas las fracciones de números enteros que tengan en su denominador números que no sean nulos.</p>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <div class="boxt1" style="order: 0;"><span class="center-text"><b>Números Naturales (N)</b></span><br> Son
+            aquellos que
+            utilizamos en nuestra vida
+            cotidiana
+            para contabilizar objetos, por lo tanto estos no pueden ser negativos, y tampoco decimales.
+        </div>
+        <div class="boxt1" style="order: 2;"><span class="center-text"><b>Números Enteros (Z)</b></span><br> Estos se
+            caracterizan por ser el complemento de los
+            números naturales, ya que contemplan su opuesto negativo y el cero (0), sin embargo, este conjunto aun no
+            alberga decimales.
+        </div>
+        <div class="boxt1" style="order: 1;"><span class="center-text"><b>Números Racionales (Q)</b></span><br> Son el
+            conjunto
+            numérico más completo puesto que
+            que
+            albergan todos los números decimales. enteros y naturales.
+        </div>
+        <div class="boxt1" style="order: 3;"><span class="center-text"><b>Números Irracionales (I)</b></span><br>
+            Representan a
+            aquellos números que por su
+            naturaleza no se pueden representar de manera fraccionaria, comúnmente se expresan mediante símbolos o
+            radicales
+        </div>
+    </div>
+</div>
+
+
+
+<div class="body2t1">
+    <br>
+    <h2 class="title2t1">OPERACIONES ARITMÉTICAS CON NÚMEROS REALES</h2>
+    <br>
+    <div class="box2t1">Las operaciones básicas de la
+        aritmética son fundamentales en la vida diaria, desde calcular el cambio de una compra hasta resolver problemas
+        matemáticos complejos. Además, son esenciales para el desarrollo de habilidades cognitivas como la resolución de
+        problemas, el razonamiento lógico y el pensamiento crítico.
+
+        En el ámbito escolar, el aprendizaje de las operaciones básicas es fundamental para el éxito en las matemáticas
+        y otras áreas de estudio que requieren conocimientos matemáticos.
+
+        Las operaciones básicas de la aritmética son esenciales en la vida diaria y en el desarrollo de habilidades
+        cognitivas y académicas.</div>
+    <br><br>
+    <h3><span class="center-text2t1">OPERACIONES ARITMÉTICAS BÁSICAS</span></h3>
+    <br>
+    <div class="container2t1">
+        <div class="box3t1" style="order: 0;"><span class="center-text"><b>Suma (+)</b></span><br>
+            <img src="{% static 'pictures/suma.png' %}" class="centerimg2">
+        </div>
+        <div class="box3t1" style="order: 2;"><span class="center-text"><b>Resta (-)</b></span><br>
+            <img src="{% static 'pictures/resta.gif' %}" class="centerimg3">
+        </div>
+        <div class="box3t1" style="order: 1;"><span class="center-text"><b>Multiplicación (x)</b></span><br>
+            <img src="{% static 'pictures/multiplicacion.png' %}" class="centerimg4">
+        </div>
+        <div class="box3t1" style="order: 3;"><span class="center-text"><b>División (/)</b></span><br>
+            <img src="{% static 'pictures/division.gif' %}" class="centerimg5">
+        </div>
+    </div>
+    <div>
+        <style>
+            .containerc {
+                width: 300px;
+                margin: 0 auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                text-align: center;
+                background-color: rgb(241, 239, 239);
+                border: 1px solid rgb(241, 239, 239);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-align: justify;
+            }
+        </style>
+        <div class="containerc">
+            <h2>Calculadora</h2>
+            <form method="post">
+                {% csrf_token %}
+                <input type="text" name="num1" placeholder="Número 1" required><br><br>
+                <input type="text" name="num2" placeholder="Número 2" required><br><br>
+                <select name="operacion">
+                    <option value="suma">Suma</option>
+                    <option value="resta">Resta</option>
+                    <option value="multiplicacion">Multiplicación</option>
+                    <option value="division">División</option>
+                </select><br><br>
+                <input type="submit" value="Calcular"><br>
+            </form>
+            {% if resultado %}
+            <label for="resultado">Resultado:</label><br>
+            <input type="text" id="resultado" name="resultado" value="{{ resultado }}" readonly><br><br>
+            {% endif %}
+            
+        </div>
+        <br><br><br><br>
+    </div>
+
+    {% endblock %}
