@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(243, 238, 234);
+    font-family: monospace;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 15px 17px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: rgb(155, 190, 200);
+    color: black;
+}
+
+.T {
+    color: red;
+}
