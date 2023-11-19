@@ -1,69 +1,158 @@
-{% extends 'base.html' %}
 {% load static %}
-
 {% block content %}
 
-
 <head>
-    <link type="text/css" rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singup</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: rgb(66, 125, 157);
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .image-container {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .form-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 10 20px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+
+        button {
+            background-color: rgb(155, 190, 200);
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        a {
+            color: black;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        .social-button {
+            margin-right: 20px;
+        }
+
+        .social-button img {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
 </head>
-<main class="containers">
-    <div class="row">
-        <div class="col-md-4 offset-md-4 mt-5">
-            <form method="POST" class="card card-body">
-                <h1 class="text-center">Singup</h1>
-                {{error}}
-                {% csrf_token %}
 
-                <div class="mb-3">
-                    <label for="username">Username:</label>
-                    <input type="text" name="username" id="username" class="form-control"
-                        placeholder="Write your username">
-                </div>
+<body>
+    <section>
+        <div class="container">
+            <div class="image-container">
+                <img src="{% static 'pictures/img_1_11zon.jpg' %}" alt="">
+            </div>
+            <div class="form-container">
+                <form method="POST" class="card card-body">
+                    <h1 class="text-center">Singup</h1>
+                    {{error}}
+                    {% csrf_token %}
 
-                <div class="mb-3">
-                    <label for="password1">Password:</label>
-                    <input type="password" name="password1" id="password1" class="form-control"
-                        placeholder="Write your password">
-                </div>
-
-                <div class="mb-3">
-                    <label for="password2">Confirm your password:</label>
-                    <input type="password" name="password2" id="password2" class="form-control"
-                        placeholder="Confirm your password">
-                </div>
-
-                <button class="btn btn-dark">
-                    Singup
-                </button>
-
-                <div class="button-container">
-                    <div class="social-button">
-                        <a href="https://www.facebook.com/universidadcatolicacuenca">
-                            <img src="{% static 'pictures/FB_logo.png' %}">
-                        </a>
+                    <div class="mb-3">
+                        <label for="username">Username:</label>
+                        <input type="text" name="username" id="username" class="form-control"
+                            placeholder="Write your username">
                     </div>
-                    <div class="social-button">
-                        <a href="https://www.youtube.com/@UCatolicaCuenca1">
-                            <img src="{% static 'pictures/YT_logo.png' %}">
-                        </a>
-                    </div>
-                    <div class="social-button">
-                        <a href="https://www.tiktok.com/@ucatocuenca">
-                            <img src="{% static 'pictures/TK_logo.png' %}">
-                        </a>
-                    </div>
-                    <div class="social-button">
-                        <a href="https://www.instagram.com/ucatolicacuenca/">
-                            <img src="{% static 'pictures/IG_logo.png' %}">
-                        </a>
-                    </div>
-                </div>
 
-            </form>
+                    <div class="mb-3">
+                        <label for="password1">Password:</label>
+                        <input type="password" name="password1" id="password1" class="form-control"
+                            placeholder="Write your password">
+                    </div>
 
+                    <div class="mb-3">
+                        <label for="password2">Confirm your password:</label>
+                        <input type="password" name="password2" id="password2" class="form-control"
+                            placeholder="Confirm your password">
+                    </div>
+                    <div class="center-container">
+                        <button class="btn btn-dark">
+                            Singup
+                        </button>
+                    </div>
+                    <p>
+                        Are you registed?, Join here to <a href=" / ">login</a>
+                    </p>
+                    <div class="image-gallery">
+                        <div class="social-button">
+                            <a href="https://www.facebook.com/universidadcatolicacuenca">
+                                <img src="{% static 'pictures/fb.png' %}">
+                            </a>
+                        </div>
+                        <div class="social-button">
+                            <a href="https://www.youtube.com/@UCatolicaCuenca1">
+                                <img src="{% static 'pictures/yt.png' %}">
+                            </a>
+                        </div>
+                        <div class="social-button">
+                            <a href="https://www.instagram.com/ucatolicacuenca/">
+                                <img src="{% static 'pictures/ig.png' %}">
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
-</main>
+    </section>
+
+</body>
+
+</html>
+
 
 {% endblock %}

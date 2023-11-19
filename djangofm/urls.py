@@ -20,21 +20,12 @@ from tasks import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
+    path('', views.singin, name='singin'),
     path('singup/', views.singup, name='singup'),
-    path('tasks/', views.tasks, name='tasks'),
+    path('home/', views.home, name='home'),
+    path('task1/', views.task1, name='task1'),
     path('task2/', views.task2, name='task2'),
     path('task3/', views.task3, name='task3'),
-    path('tasks/create/', views.create_task, name='create_task'),
-    path('logout/', views.singout, name='logout'),
-    path('singin/', views.singin, name='singin'),
-    path('tema1/', views.tema1, name='tema1'),
-    path('diferenciadecuadrados/', views.diferenciadecuadrados, name='diferenciadecuadrados'),
-    path('diferenciadecubos/', views.diferenciadecubos, name='diferenciadecubos'),
-    path('trinomiocuadradoperfecto/', views.trinomiocuadradoperfecto, name='trinomiocuadradoperfecto'),
-    path('tema6/', views.tema6, name='tema6'),
-    path('tema7/', views.tema7, name='tema7'),
-    path('tema8/', views.tema8, name='tema8'),
-    path('factorcomun/', views.factorcomun, name='factorcomun')
-    
+    path('task4/', views.task4, name='task4'),
+    path('task5/', views.task5, name='task5'),
 ]

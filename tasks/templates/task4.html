@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Trinomio Cuadrado Perfecto</title>
     <style>
         body {
             background-color: rgb(155, 190, 200);
@@ -108,41 +108,39 @@
 
 <body>
     <section>
-        <h1>Factor Común</h1>
+        <h1>Trinomio Cuadrado Perfecto</h1>
         <p class="p1">
-            El factor común es un término utilizado en álgebra para describir la práctica de identificar y extraer
-            factores que son comunes a varios términos en una expresión algebraica. Cuando se factoriza un polinomio, se
-            busca el máximo factor que es común a todos los términos y se extrae. Este proceso ayuda a simplificar la
-            expresión y facilita el análisis de sus propiedades.
+            Un trinomio cuadrado perfecto es una expresión que puede escribirse como el cuadrado de un binomio. Esto
+            significa que hay una relación específica entre los términos que permite factorizar de una manera
+            particular. Es como reconocer una forma especial en un trinomio.
         </p>
     </section>
     <section>
         <div class="div1">
             <h2>Caculadora</h2>
-            <P><b>Ingrese tres numeros</b></P>
+            <P><b>Ingrese dos numeros</b></P>
             <form method="post">
                 {% csrf_token %}
                 <label for="number1">Número 1:</label>
                 <input type="number" name="number1" id="number1"><br><br>
                 <label for="number2">Número 2:</label>
                 <input type="number" name="number2" id="number2"><br><br>
-                <label for="number3">Número 3:</label>
-                <input type="number" name="number3" id="number3"><br><br>
-                <button type="submit">Calcular Factor Común</button>
+                <button type="submit">Calcular trinomio cuadrado perfecto</button>
                 <br>
             </form>
-
-            {% if factor_comun %}
-            <p>El factor común de los tres números es: {{ factor_comun }}</p>
+            {% if trinomio_cuadrado_perfecto %}
+            <p> {{ trinomio_cuadrado_perfecto }}</p>
             {% endif %}
         </div>
     </section>
     <section>
         <div class="div2">
             <h3>Instrucciones</h3>
-            <p class="p2">Para utilizar
-                este programa usted tiene que ingresar tres numeros sin ningun tipo de letra.</p>
-            <img class="img1" src="{% static 'pictures/factor.jpg' %}" alt="">
+            <p class="p2">Para utilizar este usted tiene que ingresar dos numeros sin ninguna letra. <br>Para realizar
+                el trinomio
+                cuadrado
+                perfecto vamos a utilizar la formula:</p>
+            <img class="img1" src="{% static 'pictures/trinomio.jpg' %}" alt="">
         </div>
     </section>
 </body>
