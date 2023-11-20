@@ -33,6 +33,9 @@ def task4(request):
 
 def task5(request):
     return render(request, 'task5.html')
+
+def task6(request):
+    return render(request, 'task6.html')
 # Singup
 
 

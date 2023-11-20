@@ -1,0 +1,107 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASOS DE FACTOREO</title>
+    <style>
+        * {
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(155, 190, 200);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 800px;
+            height: 900px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        div {
+            width: 700px;
+            height: 600px;
+            background-color: rgb(210, 224, 251);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 10px auto;
+
+        }
+
+        p {
+            font-size: 15px;
+            color: rgb(45, 149, 150);
+            width: 70%;
+            float: left;
+        }
+
+        img {
+            width: 30%;
+            float: left;
+        }
+
+        a {
+            color: rgb(45, 149, 150);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>
+            <h1>FACTOR COMÚN</h1>
+            <img class="img1" src="{% static 'pictures/factor.jpg' %}" alt="">
+            <P>El factor común es un término utilizado en álgebra para describir la práctica de identificar y extraer
+                factores que son comunes a varios términos en una expresión algebraica. Cuando se factoriza un
+                polinomio, se
+                busca el máximo factor que es común a todos los términos y se extrae. Este proceso ayuda a simplificar
+                la
+                expresión y facilita el análisis de sus propiedades. <br> Para resolver ejercicios ingresa <a
+                    href="/task2">aquí</a></P>
+        </div>
+        <div>
+            <h1>DIFERENCIA DE CUADRADOS</h1>
+            <img class="img1" src="{% static 'pictures/cuadrado.png' %}" alt="">
+            <p>La diferencia de cuadrados ocurre cuando tienes dos términos que son cuadrados, y al restarlos, obtienes
+                una
+                expresión especial que se puede factorizar de una manera específica. Es como encontrar una manera
+                ordenada
+                de expresar la resta de dos cuadrados. <br> Para resolver ejercicios ingresa <a href="/task3">aquí</a>
+            </p>
+        </div>
+        <div>
+            <h1>TRINOMIO CUADRADO PERFECTO</h1>
+            <img class="img1" src="{% static 'pictures/trinomio.jpg' %}" alt="">
+            <p>Un trinomio cuadrado perfecto es una expresión que puede escribirse como el cuadrado de un binomio. Esto
+                significa que hay una relación específica entre los términos que permite factorizar de una manera
+                particular. Es como reconocer una forma especial en un trinomio. <br> Para resolver ejercicios ingresa
+                <a href="/task4">aquí</a></p>
+        </div>
+        <div>
+            <h1>DIFERENCIA DE CUBOS</h1>
+            <img class="img1" src="{% static 'pictures/cubo.png' %}" alt="">
+            <p>La diferencia de cubos se presenta cuando restas un cubo de otro cubo. En este caso, hay una fórmula
+                especial para factorizarlo, y esto simplifica la expresión algebraica. Es como encontrar un patrón
+                reconocible en la resta de dos cubos. <br> Para resolver ejercicios ingresa <a href="/task5">aquí</a>
+            </p>
+        </div>
+    </section>
+</body>
+
+{% endblock %}

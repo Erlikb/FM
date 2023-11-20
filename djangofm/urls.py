@@ -28,4 +28,5 @@ urlpatterns = [
     path('task3/', views.task3, name='task3'),
     path('task4/', views.task4, name='task4'),
     path('task5/', views.task5, name='task5'),
+    path('task6/', views.task6, name='task6'),
 ]
