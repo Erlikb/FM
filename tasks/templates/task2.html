@@ -35,33 +35,14 @@
         }
 
         label {
-            position: absolute;
-            left: 10px;
-            top: 12px;
-            padding:  0 4px;
-            color: #3fb0fc;
-            background-color: #0d1019;
-            transition: all 0.2s ease;
-            pointer-events: none;
-
+            display: block;
+            text-align: left;
         }
 
         input {
             width: 100%;
             padding: 8px;
             margin-bottom: 1px;
-            background-color: transparent;
-            color: #eee;
-            font-size: 12px;
-            border-radius: 5px;
-            border: 2px solid #000000;
-            transition: all 0.2s ease;
-        }
-        
-        input:not(:placeholder-shown)~label,
-        input:focus~label {
-            top: -8px;
-            font-size: 13px;
         }
 
         button {
@@ -106,12 +87,12 @@
             <P><b>Ingrese tres numeros</b></P>
             <form method="post">
                 {% csrf_token %}
-                <input type="number" name="number1" id="number1"><br><br>
                 <label for="number1">Número 1:</label>
-                <input type="number" name="number2" id="number2"><br><br>
+                <input type="number" name="number1" id="number1"><br><br>
                 <label for="number2">Número 2:</label>
-                <input type="number" name="number3" id="number3"><br><br>
+                <input type="number" name="number2" id="number2"><br><br>
                 <label for="number3">Número 3:</label>
+                <input type="number" name="number3" id="number3"><br><br>
                 <button type="submit">Calcular Factor Común</button>
                 <br>
             </form>
