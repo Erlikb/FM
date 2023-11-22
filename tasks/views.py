@@ -5,7 +5,6 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.http import HttpResponse
 import locale
-import math
 
 # Create your views here.
 
@@ -143,8 +142,8 @@ def task3(request):
 
 def calcular_diferencia_cuadrados_logica(a, b):
     resultado = a**2 - b**2
-    raiz_a = int(math.sqrt(a))
-    raiz_b = int(math.sqrt(b))
+    raiz_a = a**2
+    raiz_b = b**2
     factorizacion = f"({raiz_a}+{b})({raiz_a}-{b})"
     return resultado, factorizacion
 
