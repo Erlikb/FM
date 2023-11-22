@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.http import HttpResponse
 import locale
+import math
 
 # Create your views here.
 
@@ -137,14 +138,15 @@ def task3(request):
     if request.method == 'POST':
         number1 = int(request.POST.get('number1'))
         number2 = int(request.POST.get('number2'))
-        diferencia_de_cuadrados = calcular_diferencia_cuadrados_logica(number1, number2)
-    return render(request, 'task3.html', {'diferencia_de_cuadrados': diferencia_de_cuadrados})
+        resultado, factorizacion = calcular_diferencia_cuadrados_logica(number1, number2)
+    return render(request, 'task3.html', {'resultado': resultado, 'factorizacion': factorizacion})
 
 def calcular_diferencia_cuadrados_logica(a, b):
     resultado = a**2 - b**2
-    factorizacion = (a + b) * (a - b)
-    return f"La diferencia de cuadrados de {a} y {b} es {resultado}, que se factoriza como {factorizacion}."
-
+    raiz_a = int(math.sqrt(a))
+    raiz_b = int(math.sqrt(b))
+    factorizacion = f"({raiz_a}+{b})({raiz_a}-{b})"
+    return resultado, factorizacion
 
 
 #Trinomio cuadrado perfecto
