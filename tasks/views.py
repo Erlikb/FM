@@ -137,12 +137,19 @@ def task3(request):
     if request.method == 'POST':
         number1 = int(request.POST.get('number1'))
         number2 = int(request.POST.get('number2'))
-        diferencia_de_cuadrados = calcular_diferencia_cuadrados_logica(number1, number2)
+        resultado, factorizacion = calcular_diferencia_cuadrados_logica(number1, number2)
+        diferencia_de_cuadrados = {"resultado": resultado, "factorizacion": factorizacion}
     return render(request, 'task3.html', {'diferencia_de_cuadrados': diferencia_de_cuadrados})
 
 def calcular_diferencia_cuadrados_logica(a, b):
-    factorizacion = f"({a} + {b})({a} - {b})"
-    return f"La diferencia de cuadrados es {factorizacion}."
+    # Calcular la diferencia de cuadrados
+    resultado = a**2 - b**2
+    
+    # Factorizar la diferencia de cuadrados
+    factorizacion = (a + b, a - b)
+    
+    return resultado, factorizacion
+
 
 
 #Trinomio cuadrado perfecto
