@@ -135,16 +135,15 @@ def calcular_factor_comun_logica(a, b, c):
 def task3(request):
     diferencia_de_cuadrados = None
     if request.method == 'POST':
-        a = int(request.POST.get('a'))
-        b = int(request.POST.get('b'))
-        diferencia_de_cuadrados = calcular_diferencia_cuadrados_logica(a, b)
+        number1 = int(request.POST.get('number1'))
+        number2 = int(request.POST.get('number2'))
+        diferencia_de_cuadrados = calcular_diferencia_cuadrados_logica(number1, number2)
     return render(request, 'task3.html', {'diferencia_de_cuadrados': diferencia_de_cuadrados})
 
 def calcular_diferencia_cuadrados_logica(a, b):
     resultado = a**2 - b**2
-    factorizacion = f"({a} + {b})({a} - {b})"
+    factorizacion = (a + b) * (a - b)
     return f"La diferencia de cuadrados de {a} y {b} es {resultado}, que se factoriza como {factorizacion}."
-
 
 
 
