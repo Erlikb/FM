@@ -142,10 +142,8 @@ def task3(request):
 
 def calcular_diferencia_cuadrados_logica(a, b):
     resultado = a**2 - b**2
-    factorizacion = (a + b) * (a - b)
+    factorizacion = f"({a} + {b})({a} - {b})"
     return f"La diferencia de cuadrados de {a} y {b} es {resultado}, que se factoriza como {factorizacion}."
-
-
 
 
 
