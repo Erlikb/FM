@@ -135,8 +135,8 @@ def calcular_factor_comun_logica(a, b, c):
 def task3(request):
     diferencia_de_cuadrados = None
     if request.method == 'POST':
-        a = int(request.POST.get('number1'))
-        b = int(request.POST.get('number2'))
+        a = int(request.POST.get('a'))
+        b = int(request.POST.get('b'))
         diferencia_de_cuadrados = calcular_diferencia_cuadrados_logica(a, b)
     return render(request, 'task3.html', {'diferencia_de_cuadrados': diferencia_de_cuadrados})
 
