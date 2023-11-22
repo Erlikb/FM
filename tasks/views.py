@@ -141,9 +141,9 @@ def task3(request):
     return render(request, 'task3.html', {'diferencia_de_cuadrados': diferencia_de_cuadrados})
 
 def calcular_diferencia_cuadrados_logica(a, b):
-    diferencia_cuadrados = a**2 - b**2
-    factorizacion = (a + b) * (a - b)
-    return f"La diferencia de cuadrados es {diferencia_cuadrados}, que se factoriza como {factorizacion}."
+    factorizacion = f"({a} + {b})({a} - {b})"
+    return f"La diferencia de cuadrados es {factorizacion}."
+
 
 #Trinomio cuadrado perfecto
 
@@ -156,9 +156,10 @@ def task4(request):
     return render(request, 'task4.html', {'trinomio_cuadrado_perfecto': trinomio_cuadrado_perfecto})
 
 def calcular_trinomio_cuadrado_perfecto_logica(a, b):
-    trinomio_cuadrado = a*2 + 2 * a * b + b*2
-    binomio_cuadrado = (a + b)**2
+    trinomio_cuadrado = a**2 + 2 * a * b + b**2
+    binomio_cuadrado = f"({a} + {b})^2"
     return f"El trinomio cuadrado perfecto es {trinomio_cuadrado}, que se factoriza como {binomio_cuadrado}."
+
 
 #Diferencia de cubos 
 
@@ -174,4 +175,4 @@ def calcular_diferencia_cubos_logica(a, b):
     diferencia_de_cubos = a**3 - b**3
     factor_comun = a - b
     suma_cubos = a**2 + a*b + b**2
-    return f"La diferencia de cubos es {diferencia_de_cubos}, que se factoriza como ({factor_comun})({suma_cubos})."
+    return f"La diferencia de cubos es {diferencia_de_cubos}, que se factoriza como ({a} - {b})({suma_cubos})."
