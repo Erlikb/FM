@@ -175,6 +175,7 @@ def task5(request):
 
 def calcular_diferencia_cubos_logica(a, b):
     diferencia_de_cubos = a**3 - b**3
-    factor_comun = a - b
+    raiz_a = a** (1/3)
+    raiz_b = b** (1/3)
     suma_cubos = a**2 + a*b + b**2
-    return f"La diferencia de cubos es {diferencia_de_cubos}, que se factoriza como ({a} - {b})({suma_cubos})."
+    return f"La diferencia de cubos es {diferencia_de_cubos}, que se factoriza como ({raiz_a}+{raiz_b})({suma_cubos})."
