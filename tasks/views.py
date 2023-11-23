@@ -144,7 +144,8 @@ def calcular_diferencia_cuadrados_logica(a, b):
     diferencia_cuadrados = a**2 - b**2
     raiz_a = a**0.5
     raiz_b = b**0.5
-    return f"La diferencia de cuadrados es {diferencia_cuadrados}, que se factoriza como ({raiz_a}+{raiz_b})({raiz_a}-{raiz_b})."
+    factorizacion = f"({raiz_a}+{raiz_b})({raiz_a}-{raiz_b})"
+    return f"La diferencia de cuadrados es {diferencia_cuadrados}, que se factoriza como {factorizacion}."
 
 #Trinomio cuadrado perfecto
 
